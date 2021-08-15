@@ -13,13 +13,33 @@ open it in the browser by the link .
 this applaication used Autho0 library .
 
 
-Name of feature: ________________________________
+Name of feature: _________add log in button_______________________
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: _20 min____
 
-Start time: _____
+Start time: __6:00___
 
-Finish time: _____
+Finish time: _7:10____
 
-Actual time needed to complete: _____ 
+Actual time needed to complete: __1 hr___ 
 
+Name of feature: _________add log out button_______________________
+
+Estimate of time needed to complete: _20 min____
+
+Start time: __7:00___
+
+Finish time: _7:40____
+
+Actual time needed to complete: __40 hr___ 
+
+
+Name of feature: _________profile_______________________
+
+Estimate of time needed to complete: _20 min____
+
+Start time: __8:00___
+
+Finish time: _9:00____
+
+Actual time needed to complete: __1 hr___ 
