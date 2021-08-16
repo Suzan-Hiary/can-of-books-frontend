@@ -1,10 +1,11 @@
 import React from 'react';
 import Header from './Header';
-import IsLoadingAndError from './IsLoadingAndError';
+// import IsLoadingAndError from './IsLoadingAndError';
 import Footer from './Footer';
 import Login from './Login';
 import BestBooks from './BestBooks'; 
 import Profile from './component/profile'; 
+import LogButton from './component/LogButton'; 
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,17 +16,25 @@ import { withAuth0 } from "@auth0/auth0-react";
 class App extends React.Component {
 
   render() {
-    console.log('app', this.props);
+    // console.log('app', this.props);
 
     return (
      
       <Router>
-        <IsLoadingAndError>
+        {/* <IsLoadingAndError> */}
           <Header />
           <Switch>
             <Route exact path="/">
-        
-      {this.props.auth0.isAuthenticated?<BestBooks/>:<Login/>}
+            {
+          this.props.auth0.isAuthenticated ?
+            <div>
+              <BestBooks />
+              {/* <LogButton /> */}
+            </div>
+            :
+            <Login/>
+        }
+      {/* {this.props.auth0.isAuthenticated?<BestBooks/>:<Login/>} */}
             </Route>
             <Route exact path="/profile">
               <Profile />
@@ -34,7 +43,7 @@ class App extends React.Component {
             
           </Switch>
           <Footer style={{paddingtop:"100px"}}/>
-        </IsLoadingAndError>
+        {/* </IsLoadingAndError> */}
       </Router>
 
     );
