@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 
-function LogButton() {
+function logButton() {
   const {
     isAuthenticated,
     logout,
@@ -13,4 +13,4 @@ function LogButton() {
     }}>Log out</button>
   );
 }
-export default LogButton;
+export default logButton;
