@@ -3,9 +3,9 @@ import Header from './Header';
 // import IsLoadingAndError from './IsLoadingAndError';
 import Footer from './Footer';
 import Login from './Login';
-import BestBooks from './BestBooks'; 
-import Profile from './component/profile'; 
-import LogButton from './component/LogButton'; 
+import MyFavoriteBooks from './MyFavoriteBooks';
+import Profile from './component/Profile';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -19,31 +19,24 @@ class App extends React.Component {
     // console.log('app', this.props);
 
     return (
-     
-      <Router>
-        {/* <IsLoadingAndError> */}
-          <Header />
-          <Switch>
-            <Route exact path="/">
-            {
-          this.props.auth0.isAuthenticated ?
-            <div>
-              <BestBooks />
-              {/* <LogButton /> */}
-            </div>
-            :
-            <Login/>
-        }
-      {/* {this.props.auth0.isAuthenticated?<BestBooks/>:<Login/>} */}
-            </Route>
-            <Route exact path="/profile">
-              <Profile />
-            </Route>
 
+      <Router>
+
+        <Header />
+        <Switch>
+          <Route exact path="/">
+           
+            {this.props.auth0.isAuthenticated? <MyFavoriteBooks/>:<Login/>}
             
-          </Switch>
-          <Footer style={{paddingtop:"100px"}}/>
-        {/* </IsLoadingAndError> */}
+          </Route>
+          <Route exact path="/Profile">
+            <Profile />
+          </Route>
+
+
+        </Switch>
+        <Footer  />
+
       </Router>
 
     );
