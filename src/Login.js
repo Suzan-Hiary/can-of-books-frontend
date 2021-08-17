@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
-import  Button from './component/Button';
+import  LoginButton from './component/LoginButton';
 import './Login.css';
 // import { Button } from 'react-bootstrap';
 
@@ -15,7 +15,7 @@ class Login extends React.Component {
             Click Below to Log In
           </Card.Text>
 
-          <Button />
+          <LoginButton />
         </Card.Body>
       </Card>
     )

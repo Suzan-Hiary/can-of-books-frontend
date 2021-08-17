@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from "react-router-dom";
 import LogButton from './component/LogButton';
-import Button from './component/Button' ;
+import LoginButton from './component/LoginButton' ;
 import { withAuth0 } from '@auth0/auth0-react';
 import './Header.css';
 
@@ -14,7 +14,7 @@ class Header extends React.Component {
         <Navbar.Brand>My Favorite Books</Navbar.Brand>
         <Link to="/">Home</Link>
         <Link to="/profile">Profile</Link>
-        {this.props.auth0.isAuthenticated?<LogButton/>:<Button/>}
+        {this.props.auth0.isAuthenticated?<LogButton/>:<LoginButton/>}
       </Navbar>
     );
   }
