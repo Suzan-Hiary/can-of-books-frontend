@@ -1,10 +1,10 @@
 import React from 'react';
 import Header from './Header';
-import IsLoadingAndError from './IsLoadingAndError';
 import Footer from './Footer';
 import Login from './Login';
-import BestBooks from './BestBooks'; 
-import Profile from './component/profile'; 
+import MyFavoriteBooks from './MyFavoriteBooks';
+import Profile from './component/Profile';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,26 +15,27 @@ import { withAuth0 } from "@auth0/auth0-react";
 class App extends React.Component {
 
   render() {
-    console.log('app', this.props);
+    // console.log('app', this.props);
 
     return (
-     
-      <Router>
-        <IsLoadingAndError>
-          <Header />
-          <Switch>
-            <Route exact path="/">
-        
-      {this.props.auth0.isAuthenticated?<BestBooks/>:<Login/>}
-            </Route>
-            <Route exact path="/profile">
-              <Profile />
-            </Route>
 
+      <Router>
+
+        <Header />
+        <Switch>
+          <Route exact path="/">
+           
+            {this.props.auth0.isAuthenticated? <MyFavoriteBooks/>:<Login/>}
             
-          </Switch>
-          <Footer style={{paddingtop:"100px"}}/>
-        </IsLoadingAndError>
+          </Route>
+          <Route exact path="/Profile">
+            <Profile />
+          </Route>
+
+
+        </Switch>
+        <Footer  />
+
       </Router>
 
     );
