@@ -18,7 +18,7 @@ class Profile extends Component {
                                 <Card.Text>
                                     Email : {user.email}
                                 </Card.Text>
-                                <Card.Img style={{ boxShadow: '2px 2px 2px #ccc' }} variant="top" src={user.picture} alt={user.name} />
+                                {/* <Card.Img style={{ boxShadow: '2px 2px 2px #ccc' }} variant="top" src={user.picture} alt={user.name} /> */}
                             </Card.Body>
                         </Card>
 

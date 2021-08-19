@@ -68,7 +68,6 @@ class MyFavoriteBooks extends React.Component {
       name : e.target.name.value,
       description : e.target.description.value,
       status : e.target.status.value,
-      img : e.target.img.value,
     }
     // http://localhost:3000/addbook
     let url =`${process.env.REACT_APP_LOCALHOST}/addbook`;
@@ -126,8 +125,7 @@ class MyFavoriteBooks extends React.Component {
 
                   <Card.Body>
                     <Card.Title>{book.name}</Card.Title>
-                    <Card.Img style={{ boxShadow: '2px 2px 2px #ccc' }} variant="top" src={book.img} alt={book.name} />
-
+                   
                     <Card.Text>
                       {book.description}
                     </Card.Text>

@@ -11,7 +11,7 @@ class AddBookModal extends React.Component {
                         <Modal.Title>Adding New Book</Modal.Title>
                     </Modal.Header>
 
-                    <Modal.Body>  
+                    <Modal.Body>
                         <Form onSubmit={this.props.handleForm}>
                             <Form.Group className="mb-3" >
                                 <Form.Label>Book Name</Form.Label>
@@ -28,11 +28,7 @@ class AddBookModal extends React.Component {
                                 <Form.Control type="text" placeholder="Enter Book Status" name="status" />
                             </Form.Group>
 
-                            <Form.Group className="mb-3" >
-                                <Form.Label>Book Image</Form.Label>
-                                <Form.Control type="text" placeholder="Enter Book Image Link" name="img" />
-                            </Form.Group>
-                             <Modal.Footer>
+                            <Modal.Footer>
                                 <Button variant="secondary" onClick={this.props.handleClose}>
                                     Close
                                 </Button>
